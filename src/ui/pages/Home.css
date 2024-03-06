@@ -1,0 +1,5 @@
+.contenedor-presentacion{
+    width: 100%;
+    background: url('../img/img_presentacion.png') no-repeat center center/cover;
+    height: 25rem;
+}
