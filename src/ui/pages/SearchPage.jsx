@@ -3,6 +3,8 @@ import React, { useState } from 'react'
 import './SearchPage.css'
 import { GenericLayout } from '../layout/GenericLayout'
 import { useForm } from '../hook/useForm'
+import { getCharacterByName } from '../../data/api/getCharacterByName'
+import { Card } from '../components/Card'
 
 export const SearchPage = () => {
 
@@ -16,7 +18,12 @@ export const SearchPage = () => {
     const onSearch = (event)=>{
 
         event.preventDefault();
-        console.log(name);
+
+        let nameNormalizado = (name.toLowerCase()).replace(/\s+/g,'+')
+        console.log(nameNormalizado);
+
+        getCharacterByName(nameNormalizado)
+                        .then( (chacs) => setCharacters( chacs.results ))
 
     }
 
@@ -42,7 +49,7 @@ export const SearchPage = () => {
         <div className='container mt-5'>
             <div className="row m-0 justify-content-between">
 
-                <div className="col-5 mt-4" style={{maxWidth: '25rem'}}>
+                <div className="col-12 col-md-5 mt-4 mb-5 col-search" style={{maxWidth: '25rem'}}>
                     <h3>Buscar personaje</h3>
                     <hr />
 
@@ -59,10 +66,30 @@ export const SearchPage = () => {
                     </form>
                 </div>
 
-                <div className="col-7">
+                <div className="col-12 col-md-7">
                     
                     {messageAlert()}
                     <hr  className='mb-5'/>
+
+                    {
+                        (characters.length === 0) ? '' 
+                                                  : (
+                            <ul>
+                                {
+                                    characters.map( (chac,index) => (
+                                        <li key={index} className='p-4'>
+                                            <Card {...chac} />
+                                        </li>
+                                    ) )
+                                }
+                            
+
+                            </ul>
+                        )
+                            
+
+
+                    }
                 </div>
             </div>
         </div>

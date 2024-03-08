@@ -21,5 +21,21 @@
 .contenedor-personajes{
     min-height: 35rem;
     background-color: black;
-    padding: 5rem;
+    padding: 4rem;
+}
+
+@media(max-width: 615px)
+{
+    .title-presentacion{
+        font-size: 3.3rem;
+    }
+
+    .subTitle-presentacion{
+        font-size: 1.3rem;
+    }
+
+    .contenedor-personajes{
+
+        padding: 1rem;
+    }
 }

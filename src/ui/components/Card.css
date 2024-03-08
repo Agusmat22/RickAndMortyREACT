@@ -1,0 +1,11 @@
+@media(max-width: 612px)
+{
+    .btn-light{
+       font-size: 0.8rem;
+    }
+
+    .cont-card{
+        height: 100%;
+        width: 100%;
+    }
+}

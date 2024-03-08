@@ -9,6 +9,7 @@ import { getCharacters } from '../../data/api/getCharacters.js';
 import './Home.css'
 import { GenericLayout } from '../layout/GenericLayout.jsx';
 import { useNavigate } from 'react-router-dom';
+import { Card } from '../components/Card.jsx';
 
 
 export const Home = () => {
@@ -17,7 +18,6 @@ export const Home = () => {
 
   const dispatch = useDispatch();
 
-  const navigate = useNavigate();
   
   useEffect(() => {
 
@@ -61,10 +61,7 @@ export const Home = () => {
     }
  }
 
- const onNavigateCharacter = (id)=>{
-
-  navigate(`/personaje/${id}`);
- }
+ 
 
   
 
@@ -89,28 +86,9 @@ export const Home = () => {
 
             personajes.map( per => (
 
-              <div className="col-4 d-flex align-items-center justify-content-center p-4" key={per.id} >
+              <div className="col-md-6 col-lg-4 d-flex align-items-center justify-content-center p-4" key={per.id} >
               
-                <div className="card bg-dark" style={{width: '100%'}}>
-
-                  <div className="row">
-
-                    <div className="col-5">
-                      <img src={per.image} alt='' className='card-img' />
-                    </div>
-
-                    <div className="col-7 d-flex flex-column align-items-center">
-
-                      <div className="card-body d-flex flex-column align-items-center justify-content-around ">
-                        <h5 className="card-title fs-4 text-white">{per.name}</h5>
-                        <button className='btn btn-light' onClick={()=> onNavigateCharacter(per.id)}>Ver mas</button>
-                      </div>
-
-                  </div>
-                </div>
-                  
-                  
-                </div>
+                <Card {...per}/>
 
               </div>
 

@@ -7,7 +7,7 @@ export const Navbar = () => {
 
         <div className="container-fluid">
 
-            <a className="navbar-brand" href="#">Comida Gustal</a>
+            <a className="navbar-brand" href="#"></a>
 
             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">         
                 <span className="navbar-toggler-icon"></span>
@@ -18,9 +18,7 @@ export const Navbar = () => {
 
                     <NavLink className="nav-link" aria-current="page" to={'/'}>Menu</NavLink>
                     <NavLink className="nav-link" to={'/search'}>Buscar</NavLink>
-                    <div>
-                        <NavLink className="nav-link" to={'admin'}>Admin</NavLink>
-                    </div>
+
                 </div>
             </div>
 
