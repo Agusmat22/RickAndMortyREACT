@@ -1,0 +1,18 @@
+.contenedor-personaje{
+    min-height: 30rem;
+}
+
+.img-personaje{
+    width: 70%;
+    height: 100%;
+
+    
+}
+
+@media (max-width: 865px)
+{
+    .img-personaje{
+        width: 100%;
+    }
+
+}

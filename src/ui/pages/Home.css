@@ -1,5 +1,25 @@
 .contenedor-presentacion{
     width: 100%;
-    background: url('../img/img_presentacion.png') no-repeat center center/cover;
-    height: 25rem;
+    background: linear-gradient(rgba(0, 0, 0, 0.20),rgba(0, 0, 0, 0.85) ) , url('../img/img_presentacion.png') no-repeat center center/cover;
+    height: 34rem;
+}
+
+.title-presentacion{
+    font-size: 4.2rem;
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 5);
+}
+
+.subTitle-presentacion{
+    font-size: 2rem;
+    font-weight: bold;
+    color: rgb(177, 174, 174);
+    text-shadow: 2px 2px 4px rgb(0, 0, 0);
+
+}
+
+.contenedor-personajes{
+    min-height: 35rem;
+    background-color: black;
+    padding: 5rem;
 }

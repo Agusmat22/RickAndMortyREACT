@@ -9,7 +9,7 @@ export const GenericLayout = ({children})=>{
         <div className="contenedor-layout d-flex flex-column align-items-center justify-content-center">
             <Navbar />
 
-            <div style={{minHeight: '84.5vh', width: '100%'}}>
+            <div style={{minHeight: '87.5vh', width: '100%'}}>
                 {children}
             </div>
 

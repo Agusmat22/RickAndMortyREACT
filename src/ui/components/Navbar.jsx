@@ -17,7 +17,7 @@ export const Navbar = () => {
                 <div className="navbar-nav ">
 
                     <NavLink className="nav-link" aria-current="page" to={'/'}>Menu</NavLink>
-                    <NavLink className="nav-link" to={'/'}>Ubicacion</NavLink>
+                    <NavLink className="nav-link" to={'/search'}>Buscar</NavLink>
                     <div>
                         <NavLink className="nav-link" to={'admin'}>Admin</NavLink>
                     </div>

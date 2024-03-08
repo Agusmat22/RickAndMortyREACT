@@ -7,7 +7,7 @@ export const personajesSlice = createSlice({
     initialState: {
         personajes: [],
         isLoading: false,
-        page: 0,
+        page: 1,
     },
     reducers: {
         startLoadingPersonajes: (state, /* action */ ) => {
@@ -25,9 +25,15 @@ export const personajesSlice = createSlice({
 
             state.personajes = payload.personajes
 
+        },
+
+        setPage: (state,action) =>{
+            console.log(action.payload.page)
+            state.page = action.payload.page
+            state.personajes = []
         }
 
     }
 })
 
-export const {startLoadingPersonajes, setCharacters} = personajesSlice.actions;
+export const {startLoadingPersonajes, setCharacters, setPage} = personajesSlice.actions;
